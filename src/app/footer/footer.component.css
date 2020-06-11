@@ -1,0 +1,54 @@
+.site-footer {
+  padding: 8em 0;
+  background: #000;
+}
+
+.site-footer .footer-heading {
+  font-size: 16px;
+  color: #fff;
+}
+.site-footer p {
+  color: #fff;
+}
+
+.site-footer ul li {
+  margin-bottom: 10px;
+}
+.site-footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+.site-footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.site-footer .form-control {
+  border: none;
+  border: 1px solid #e6e6e6;
+  height: 55px;
+}
+.site-footer .btn-primary {
+  color: #212529;
+  background-color: #f4ad2d;
+  border-color: #f4ad2d;
+  border-radius: 30px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.site-footer .btn-primary:focus{
+  border-color: #f4ad2d;
+  box-shadow: 0 0 0 0.2rem #f4ad2d;
+}
+.site-footer .btn-primary:not(:disabled):not(.disabled):active{
+  background-color: #f4ad2d;
+  border-color: #f4ad2d;
+  box-shadow: 0 0 0 0.2rem #f4ad2d;
+}
+
+.site-footer .btn-primary:not(:disabled):not(.disabled):active:focus{
+  background-color: #f4ad2d;
+  border-color: #f4ad2d;
+  box-shadow: 0 0 0 0.2rem #f4ad2d;
+}

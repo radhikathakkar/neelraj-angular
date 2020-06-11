@@ -1,0 +1,106 @@
+<app-header></app-header>
+
+<app-bottom-header></app-bottom-header>
+<!-- OUR WORK -->
+<section class="work">
+  <div class="container">
+    <div class="col-md-12 text-center mx-auto work-heading">
+      <h3 class="subtitle-39293">My Works</h3>
+    </div>
+    <div class="clearfix"></div>
+    <div class="space"></div>
+    <div class="col-md-12 posts" id='posts'>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 post" *ngFor="let user of topNineUser">
+          <div class="col-md-12 post-data">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+              alt="" />
+            <h3> {{user.firstname}} </h3>
+            <a [routerLink]="['/profile/', user._id]"> <button class="btn view">View Profile</button> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 see-more">
+      <a routerLink='members'><button class="btn see-more-btn"> See More </button></a>
+    </div>
+  </div>
+</section>
+<!-- OUR WORK END-->
+
+<!-- TESTIMONIAL -->
+<section class="testimonial bg-light">
+  <div class="container">
+    <div class="row mb-5 ">
+      <div class="col-md-7 text-center mx-auto">
+        <span class="subtitle-39293">Testimonials</span>
+        <h2 class="serif">What Client Says</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-4">
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+        </div>
+        <div>
+          <h5 class="serif mb-4">The Best Photographer</h5>
+          <blockquote class="quote_39823">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi accusantium
+              non aut
+              perspiciatis
+              nisi magni libero, molestias.</p>
+          </blockquote>
+          <p>— Chris Smith</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+
+        <div class="mb-4">
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+        </div>
+        <div>
+          <h5 class="serif mb-4">Easy To Work With</h5>
+          <blockquote class="quote_39823">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi accusantium
+              non aut
+              perspiciatis
+              nisi magni libero, molestias.</p>
+          </blockquote>
+          <p>— Chris Smith</p>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-4">
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+          <span class="icon-star text-warning"></span>
+        </div>
+        <div>
+          <h5 class="serif mb-4">Professional Photographer</h5>
+          <blockquote class="quote_39823">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas excepturi accusantium
+              non aut
+              perspiciatis
+              nisi magni libero, molestias.</p>
+          </blockquote>
+          <p>— Chris Smith</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TESTIMONIAL ENDS -->
+<app-footer></app-footer>

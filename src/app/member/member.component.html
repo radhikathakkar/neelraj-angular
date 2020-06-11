@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="top-space"></div>
+<section class="member-list">
+  <div class="container">
+    <!-- <div class="col-md-12 text-center mx-auto work-heading">
+      <h3 class="subtitle-39293">My Works</h3>
+    </div> -->
+    <div class="col-md-12 text-center mx-auto top-work-heading">
+      <div class="row">
+        <div class="col-md-4">
+          <input matInput id='searchByGender' [(ngModel)]='gender' (input)="applyFilter($event.target.value, 'gender')"
+            placeholder="Search By Gender ..." class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <input matInput id='sortByAge' [(ngModel)]='age' (input)="applyFilter($event.target.value, 'gender')"
+            class="form-control" />
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="space"></div>
+    <div class="col-md-12 posts" id='posts'>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 post" *ngFor="let user of users">
+          <div class="col-md-12 post-data">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+              alt="" />
+            <h3> {{user.firstname}} </h3>
+            <h5> {{user.city}} </h5>
+            <a [routerLink]="['/profile/', user._id]"> <button class="btn view">View Profile</button> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

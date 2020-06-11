@@ -1,0 +1,42 @@
+.header {
+  background: rgba(137, 0, 37, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 10px;
+  top: 0px;
+}
+
+.header .navbar {
+  padding: 0 !important;
+}
+
+.header .navbar-logo {
+  max-width: 35%;
+}
+
+.header .navbar-logo img {
+  width: 75%;
+}
+
+.header ul a.active {
+  color: #000;
+}
+
+.header-login .btn-primary {
+  color: #ecd7d0;
+  background-color: #890025;
+  border-radius: 30px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-color: #890025;
+}
+
+.header-login .btn-primary:focus, .header-login .btn-primary:active {
+  box-shadow: 0 0 0 0.2rem #890025 !important;
+  background-color: #890025 !important;
+  border-color: #890025 !important;
+}

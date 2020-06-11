@@ -1,0 +1,40 @@
+/**
+slider
+**/
+.main-slider{
+  background-image: url('../../assets/images/main-image.jpg');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 196px);
+  min-height: 677px;
+  position: relative;
+}
+.main-slider .slider-content{
+  top: 100%;
+  max-width: 100%
+}
+.main-slider .slider-content h1{
+ font-size: 5rem;
+ color: #890025;
+ line-height: 1;
+ font-family: "Hepta Slab", serif;
+ font-weight: 900;
+}
+
+.main-slider .slider-content p{
+ font-size: 18px;
+ color: #fff;
+}
+
+.main-slider .slider-content .slide-btn{
+ color: #ecd7d0;
+ background-color: #890025;
+ border-color: #890025;
+ border-radius: 30px;
+ font-size: .8rem;
+ text-transform: uppercase;
+ letter-spacing: .2rem;
+ padding: 10px 20px;
+ text-decoration: none;
+}

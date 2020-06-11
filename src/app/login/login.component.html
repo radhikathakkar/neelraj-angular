@@ -1,0 +1,23 @@
+<div class="modal-body">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field class="form-group">
+        <input matInput type="email" placeholder="Email" formControlName="email" name="email" required>
+        <mat-error *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+          Please Enter the Email!!
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form-group">
+        <input matInput type="password" placeholder="Password" formControlName="password" name="password" required>
+        <mat-error *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+          Please Enter the Password!!</mat-error>
+      </mat-form-field>
+    </p>
+
+    <button type="submit" class="btn btn-primary" [disabled]='!loginForm.valid'>Submit</button>
+    <button type="submit" class="btn btn-primary" (click)='closeDialog()'>Close</button>
+    <h5> If not register Please <a routerLink='register'> Click Here </a> ! </h5>
+  </form>
+</div>

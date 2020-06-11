@@ -1,0 +1,183 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="top-space"></div>
+<!-- Edit Profile Start -->
+<section class="edit">
+  <div class="container">
+    <div class="col-md-12 register-form">
+      <div class="row">
+        <div class="col-md-4">
+        <img
+            [src]="imageSrc || 'http://placehold.it/180'"
+            alt="" 
+            class='disp-img' />
+          <input type="file" name="image" class="form-control" (change)='readURL($event)'
+              accept=".jpg, .jpeg, .png" multiple />
+          <div class="form-row">
+            <div class="col-md-12 text-center ml-auto">
+              <button type="submit" class="btn btn-primary register-btn" (click)='submitImg()'>Upload Image</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <form [formGroup]='editForm' (ngSubmit)='onSubmit()'>
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input type="text" class="form-control register-form-input" id="firstName" placeholder="First Name"
+                  formControlName='firstname' required>
+                <mat-error *ngIf="editForm.get('firstname').hasError('required') && editForm.get('firstname').touched">
+                  Please Enter the firstname!!</mat-error>
+              </div>
+              <div class="col-md-4 form-group">
+                <input type="text" class="form-control register-form-input" id="middleName" formControlName='middlename'
+                  placeholder="Middle Name" required>
+                <mat-error
+                  *ngIf="editForm.get('middlename').hasError('required') && editForm.get('middlename').touched">
+                  Please Enter the middlename!!</mat-error>
+              </div>
+              <div class="col-md-4 form-group">
+                <input type="text" class="form-control register-form-input" formControlName='lastname' id="lastName"
+                  placeholder="Last Name" required>
+                <mat-error *ngIf="editForm.get('lastname').hasError('required') && editForm.get('lastname').touched">
+                  Please Enter the lastname!!</mat-error>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control register-form-input" id="email" formControlName='email'
+                  aria-describedby="emailHelp" placeholder="Email" required>
+                <mat-error *ngIf="editForm.get('email').hasError('required') && editForm.get('email').touched">
+                  Please Enter the email!!</mat-error>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="tel" class="form-control register-form-input" formControlName='contactNo' id="contactNo"
+                  placeholder="Contact No" required>
+                <mat-error *ngIf="editForm.get('contactNo').hasError('required') && editForm.get('contactNo').touched">
+                  Please Enter the contactNo!!</mat-error>
+              </div>
+            </div>
+            <!-- <div class="row">
+          <div class="col-md-6 form-group">
+            <mat-label for="DOB">Date Of Birth</mat-label>
+            <input type="date" class="form-control register-form-input" id="DOB" formControlName='DOB' required>
+          </div>
+        </div> -->
+            <!-- <div class="row">
+          <div class="col-md-6 form-group">
+            <mat-label for="BirthTime">Birth Time</mat-label>
+            <input type="text" class="form-control register-form-input" id="birthTime" formControlName='birthTime'
+              required>
+          </div>
+          <div class="col-md-6 form-group">
+            <mat-label for="BirthPlace">Birth Place</mat-label>
+            <input type="text" class="form-control register-form-input" id="birthPlace" formControlName='birthPlace'
+              required>
+          </div>
+        </div> -->
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label> Education </label>
+                <input type="text" class="form-control register-form-input" id="education" formControlName='education'
+                  placeholder="Education" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label> Select Occupation</label>
+                <select class="form-control" id="occupation" formControlName='occupation' required>
+                  <!-- <option></option> -->
+                  <option *ngFor='let occup of occupationList' value={{occup}}> {{ occup }} </option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label> Select Father's Occupation</label>
+                <select class="form-control" id="fatherOccupation" formControlName='fatherOccupation' required>
+                  <!-- <option>Select Father's Occupation</option> -->
+                  <option *ngFor='let occup of occupationList' value={{occup}}> {{ occup }} </option>
+                </select>
+              </div>
+              <div class="col-md-6 form-group">
+                <label> Select Mother's Occupation</label>
+                <select class="form-control" id="motherOccupation" formControlName='motherOccupation' required>
+                  <!-- <option value="Select Mother's Occupation">Select Mother's Occupation</option> -->
+                  <option *ngFor='let occup of occupationList' value={{occup}}> {{ occup }} </option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control register-form-input" id="height" formControlName='height'
+                  placeholder="Height" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control register-form-input" id="weight" formControlName='weight'
+                  placeholder="Weight" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control register-form-input" id="jooth" formControlName='jooth'
+                  placeholder="Jooth" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control register-form-input" id="mosad" formControlName='mosad'
+                  placeholder="mosad" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <label>Select Your Marital Status </label>
+                <select class="form-control" id="maritalStatus" formControlName='maritalStatus' required>
+                  <!-- <option>Select Your Marital Status</option> -->
+                  <option *ngFor='let status of statusList' value={{status}}> {{ status }} </option>
+                </select>
+              </div>
+              <div class="col-md-5 form-group">
+                <mat-label for="Manglik" style="padding-right: 20px;">Manglik? </mat-label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="manglik" id="manglikYes" formControlName="manglik"
+                    value="yes">
+                  <label class="form-check-label" for="manglikYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="manglik" id="manglikNo" formControlName="manglik"
+                    value="no">
+                  <label class="form-check-label" for="manglikNo">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <input type="text" class="form-control" id="country" formControlName='country' placeholder="Country"
+                  required>
+              </div>
+              <div class="form-group col-md-4">
+                <input type="text" class="form-control" id="city" formControlName='city' placeholder="City" required>
+              </div>
+              <div class="form-group col-md-3">
+                <input type="tel" class="form-control" id="zipCode" formControlName='zipCode' placeholder="Zip Code"
+                  required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <textarea class="form-control" rows="4" id="address" formControlName='address'></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 text-center ml-auto">
+                <button type="submit" class="btn btn-primary register-btn" [disabled]='editForm.invalid'>Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Edit Profile End -->
+<div class="top-space"></div>
+<app-footer></app-footer>

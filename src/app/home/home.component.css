@@ -1,0 +1,108 @@
+/**
+*
+*work
+**/
+
+.work {
+  padding: 5rem;
+}
+
+.space {
+  height: 100px;
+}
+
+.work-heading h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.post-data {
+  background-color: antiquewhite;
+  height: 250px;
+  text-align: center;
+  display: block;
+  padding: 10px 20px;
+}
+
+.main-heading {
+  margin-bottom: 6rem !important;
+}
+
+.post {
+  height: 280px;
+  margin-bottom: 3rem;
+  float: left;
+}
+
+.post img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex: 1;
+  display: inline-block;
+  margin-top: -75px;
+}
+
+.posts .row {
+  margin-bottom: 30px;
+}
+
+.see-more .see-more-btn {
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  background-color: transparent;
+  border: 1px solid rgb(226, 187, 136);
+}
+
+.see-more .see-more-btn:hover {
+  transition: 6s ease-in-out;
+}
+
+.see-more {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-data .view {
+  border: 1px solid;
+  border-radius: 25px;
+  bottom: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 95px;
+  width: 140px;
+}
+
+/**
+* TESTIMONIAL SECTION
+*/
+
+.testimonial {
+  padding: 50px;
+}
+
+.testimonial .text-warning {
+  color: #f4ad2d !important;
+}
+
+.icon-star:before {
+  font-family: "FontAwesome";
+  content: "\f005";
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

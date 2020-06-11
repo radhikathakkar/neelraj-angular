@@ -1,0 +1,12 @@
+.contact-page{
+  position: relative;
+  padding: 5rem;
+  margin: 5rem 0rem;
+}
+
+.contact-btn .btn-primary{
+  box-shadow: 0 0 0 0.2rem #890025 !important;
+  background-color: #890025 !important;
+  border-color: #890025 !important;
+  color: #ecd7d0;
+}

@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<div class="contact-page">
+  <div class="container">
+
+    <div class="row mb-5 ">
+      <div class="col-md-7 text-center mx-auto">
+        <span class="subtitle-39293">Contact</span>
+        <h2 class="serif">Get In Touch</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mb-5">
+        <form [formGroup]='contactForm' (ngSubmit)="onSubmit()">
+          <div class="form-group row">
+            <div class="col-md-6 mb-4 mb-lg-0">
+              <input type="text" class="form-control" formControlName='firstname' placeholder="First name" required />
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" formControlName='lastname' placeholder="Last name" required />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <input type="email" class="form-control" formControlName='email' placeholder="Email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Subject</label>
+            <select class="form-control" (change)="changeSubject($event.target.value)" formControlName="subject">
+              <option *ngFor='let subject of subjectList' value={{subject}}> {{ subject }} </option>
+            </select>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <textarea name="" id="" class="form-control" formControlName='message' placeholder="Write your message."
+                cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6 mr-auto contact-btn">
+              <input type="submit" class="btn btn-block btn-primary py-3 px-5" value="Send Message">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 ml-auto">
+        <div class="bg-white p-3 p-md-5">
+          <h3 class="text-black mb-4">Contact Info</h3>
+          <ul class="list-unstyled footer-link">
+            <li class="d-block mb-3">
+            <li class="d-block mb-3"><span class="d-block text-black">Name:</span><span>Roshni Rajnikant
+                Sharma</span></li>
+            <li><span class="d-block text-black">Address:</span>
+              <span>66 KV sub station, G.E.B. colony,Near Uttarsanda crossing, Uttarsanda-387370,
+                Ta-Nadiad, Dist-Kheda</span></li>
+            <li class="d-block mb-3" style="margin-top: 1rem !important"><span
+                class="d-block text-black">Phone:</span><span>+91 9726155295</span></li>
+            <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>rrsharma1710@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> <!-- END .site-section -->
+
+<app-footer></app-footer>

@@ -1,0 +1,26 @@
+<!-- slider section -->
+<section class="main-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6 slider-content">
+          <h1>NeelRaj</h1>
+          <h6><span> WHERE HEARTS BECOME SOUL</span> </h6>
+          <p>
+            <span>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</span> <br>
+            <span>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</span>
+          </p>
+
+          <p>
+
+            <!--    <a href="contact.html" class="btn btn-primary slide-btn">Contact Me</a> */ -->
+            <a routerLink='register' class="btn btn-primary slide-btn" *ngIf='showLoginBtn'>Register</a>
+            <button mat-button class="btn btn-primary slide-btn" (click)="openLoginModal()"
+              *ngIf='showLoginBtn'>Login</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- slider section end -->

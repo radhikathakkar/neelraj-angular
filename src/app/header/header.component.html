@@ -1,0 +1,50 @@
+<!-- header section -->
+<section class="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand navbar-logo" href="/">
+        <img src="../../assets/images/neelraj-logo-final.png" alt="neelraj" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto site-navbar">
+          <li class="nav-item  site-navigation">
+            <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" [routerLink]="'/'">Home
+            </a>
+          </li>
+          <li class="nav-item site-navigation">
+            <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}"
+              [routerLink]="'/about'">About us</a>
+          </li>
+          <li class="nav-item site-navigation">
+            <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}"
+              [routerLink]="'/members'">Member</a>
+          </li>
+          <li class="nav-item site-navigation">
+            <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}"
+              [routerLink]="'/contact'">Contact us</a>
+          </li>
+        </ul>
+        <div class="header-login" *ngIf='showLogoutBtn'>
+          <div>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="openProfile()">
+                <span>My Profile</span>
+              </button>
+              <button mat-menu-item (click)="logout()">
+                <span>Logout</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
